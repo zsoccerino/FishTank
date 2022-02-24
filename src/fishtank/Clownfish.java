@@ -12,5 +12,7 @@ public class Clownfish extends Fish implements Feed {
 
     @Override
     public void feed() {
+        this.weight += 1;
     }
+
 }

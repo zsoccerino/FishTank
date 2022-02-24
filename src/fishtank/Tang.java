@@ -10,5 +10,7 @@ public class Tang extends Fish implements Feed {
 
     @Override
     public void feed() {
+        this.weight += 1;
+        this.memoryLoss = true;
     }
 }

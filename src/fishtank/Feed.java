@@ -1,6 +1,7 @@
 package fishtank;
 
-public interface Feed {
+public abstract interface Feed {
     
     public void feed();
+    
 }

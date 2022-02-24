@@ -2,7 +2,7 @@ package fishtank;
 
 public abstract class Fish {
     protected String name;
-    protected byte weight = 1;
+    protected int weight = 1;
     protected String color = "white";
     protected Boolean memoryLoss = false;
     
@@ -18,11 +18,11 @@ public abstract class Fish {
         this.name = newName;
     }
     
-    public byte getWeight() {
+    public int getWeight() {
         return this.weight;
     }
     
-    public void setWeight(byte newWeight) {
+    public void setWeight(int newWeight) {
         this.weight = newWeight;
     }
     

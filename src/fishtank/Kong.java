@@ -10,5 +10,6 @@ public class Kong extends Fish implements Feed {
 
     @Override
     public void feed() {
+        this.weight += 2;
     }
 }
