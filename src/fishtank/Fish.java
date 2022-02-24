@@ -1,41 +1,44 @@
 package fishtank;
 
-import java.util.ArrayList;
-
 public abstract class Fish {
-    private String name;
-    private byte weight;
-    private ArrayList<String> color = new ArrayList<String>();
+    protected String name;
+    protected byte weight = 1;
+    protected String color = "white";
+    protected Boolean memoryLoss = false;
     
     public void status() {
-        System.out.println("status info here");
+        System.out.println("name: " + this.name + ", weight: " + this.weight + ", color: " + this.color + ", short-term memory loss: " + this.memoryLoss);
     }
     
-    public void feed() {
-        System.out.println("feed info here");
-    }
-    
-    public String getName () {
+    public String getName() {
         return this.name;
     }
     
-    public void setName (String newName) {
+    public void setName(String newName) {
         this.name = newName;
     }
     
-    public byte getWeight () {
+    public byte getWeight() {
         return this.weight;
     }
     
-    public void setWeight (byte newWeight) {
+    public void setWeight(byte newWeight) {
         this.weight = newWeight;
     }
     
-    public ArrayList<String> getColor () {
+    public String getColor() {
         return this.color;
     }
     
-    public void setColor (ArrayList<String> newColor) {
+    public void setColor(String newColor) {
         this.color = newColor;
+    }
+    
+    public Boolean getMemoryLoss() {
+        return this.memoryLoss;
+    }
+    
+    public void setMemoryLoss(Boolean newMemState) {
+        this.memoryLoss = newMemState;
     }
 }
