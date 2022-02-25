@@ -7,7 +7,7 @@ public abstract class Fish {
     protected Boolean memoryLoss = false;
     
     public void status() {
-        System.out.println("name: " + this.name + ", weight: " + this.weight + ", color: " + this.color + ", short-term memory loss: " + this.memoryLoss);
+        System.out.println("type: " + this.getClass().getSimpleName() + ", name: " + this.name + ", weight: " + this.weight + ", color: " + this.color + ", short-term memory loss: " + this.memoryLoss);
     }
     
     public String getName() {
