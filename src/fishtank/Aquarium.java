@@ -3,29 +3,19 @@ package fishtank;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class Aquarium implements Feed {
+public class Aquarium {
 
     public ArrayList<Fish> fishes = new ArrayList<>();
     
-    @Override
     public void feed() {
-        
+
+        fishes.forEach(fish -> {
+            fish.feed();
+        });
     }
     
-    public void addFish(String type, String name) {
-        
-        if (type.equals("Clownfish")) {
-            fishes.add(new Clownfish(name));
-        }
-        
-        if (type.equals("Tang")) {
-            fishes.add(new Tang(name));
-        }
-        
-        if (type.equals("Kong")) {
-            fishes.add(new Kong(name));
-        }
-        
+    public void addFish(Fish fish) {
+        fishes.add(fish);
     }
     
     public void removeFish() {
@@ -40,7 +30,7 @@ public class Aquarium implements Feed {
         }
     }
     
-    public void status() {
+    public void getStatus() {
         
         Iterator<Fish> it = fishes.iterator();
         
