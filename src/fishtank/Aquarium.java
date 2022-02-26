@@ -16,7 +16,6 @@ public class Aquarium implements Feed {
         
         if (type.equals("Clownfish")) {
             fishes.add(new Clownfish(name));
-            //System.out.println(fishes);
         }
         
         if (type.equals("Tang")) {
@@ -25,8 +24,6 @@ public class Aquarium implements Feed {
         
         if (type.equals("Kong")) {
             fishes.add(new Kong(name));
-            //System.out.println(fishes);
-
         }
         
     }
@@ -37,15 +34,18 @@ public class Aquarium implements Feed {
         
         while(it.hasNext()) {
             Integer weight = it.next().getWeight();
-            if(weight.equals(1)) {
+            if(weight >= 11) {
                 it.remove();
             }
-            
         }
     }
     
     public void status() {
         
+        Iterator<Fish> it = fishes.iterator();
+        
+        while(it.hasNext()) {
+            it.next().status();
+        }
     }
-    
 }

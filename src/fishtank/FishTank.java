@@ -8,8 +8,8 @@ public class FishTank {
         
         myAquarium.addFish("Clownfish", "Nemo");
         myAquarium.addFish("Kong", "Dory");
+        myAquarium.addFish("Tang", "Béla");
         System.out.println(myAquarium.fishes);
-        myAquarium.removeFish();
-        System.out.println(myAquarium.fishes);
+        myAquarium.status();
     }
 }
