@@ -1,10 +1,11 @@
 package fishtank;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Aquarium implements Feed {
 
-    public ArrayList<Fish> fishes = new ArrayList<>();  
+    public ArrayList<Fish> fishes = new ArrayList<>();
     
     @Override
     public void feed() {
@@ -15,6 +16,7 @@ public class Aquarium implements Feed {
         
         if (type.equals("Clownfish")) {
             fishes.add(new Clownfish(name));
+            //System.out.println(fishes);
         }
         
         if (type.equals("Tang")) {
@@ -23,12 +25,23 @@ public class Aquarium implements Feed {
         
         if (type.equals("Kong")) {
             fishes.add(new Kong(name));
+            //System.out.println(fishes);
+
         }
         
     }
     
     public void removeFish() {
         
+        Iterator<Fish> it = fishes.iterator();
+        
+        while(it.hasNext()) {
+            Integer weight = it.next().getWeight();
+            if(weight.equals(1)) {
+                it.remove();
+            }
+            
+        }
     }
     
     public void status() {
