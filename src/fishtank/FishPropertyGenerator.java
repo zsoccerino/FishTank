@@ -18,8 +18,8 @@ public class FishPropertyGenerator {
         return this.colors[randomValue];
     }
     
-//    public int getRandomWeight() {
-//        int randomValue = myRandom.nextInt(11);
-//        return randomValue;
-//    }
+    public int getRandomWeight() {
+        int randomValue = myRandom.nextInt(11);
+        return randomValue;
+    }
 }

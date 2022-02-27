@@ -5,16 +5,17 @@ public abstract class Fish {
     protected final FishPropertyGenerator generator = new FishPropertyGenerator();
 
     protected String name = generator.getRandomName();
-//    protected int weight = generator.getRandomWeight();
-    protected int weight = 1;
+    protected int weight = generator.getRandomWeight();
     protected String color = generator.getRandomColor();
-    protected Boolean memoryLoss = false;
     
     public abstract void feed();
     
+    protected String buildStatus() {
+        return ("name: " + this.name + ", type: " + this.getClass().getSimpleName() + ", weight: " + this.weight + ", color: " + this.color);
+    }
+    
     public void status() {
-        String status = "name: " + this.name + ", type: " + this.getClass().getSimpleName() + ", weight: " + this.weight + ", color: " + this.color;
-        System.out.println(status);
+        System.out.println(buildStatus());
     }
     
     public int getWeight() {

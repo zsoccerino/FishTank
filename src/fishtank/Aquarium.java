@@ -6,16 +6,10 @@ import java.util.Iterator;
 public class Aquarium {
 
     public final ArrayList<Fish> fishes = new ArrayList<>();
+    private final FishGenerator generator = new FishGenerator();
     
-    public void feed() {
-
-        fishes.forEach(fish -> {
-            fish.feed();
-        });
-    }
-    
-    public void addFish(Fish fish) {
-        fishes.add(fish);
+    public void addFish() {
+        fishes.add(generator.getRandomFish());
     }
     
     public void removeFish() {
@@ -30,6 +24,13 @@ public class Aquarium {
         }
     }
     
+        public void feed() {
+
+        fishes.forEach(fish -> {
+            fish.feed();
+        });
+    }
+        
     public void getStatus() {
         
         Iterator<Fish> it = fishes.iterator();
