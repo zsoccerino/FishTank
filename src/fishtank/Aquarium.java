@@ -5,7 +5,7 @@ import java.util.Iterator;
 
 public class Aquarium {
 
-    public ArrayList<Fish> fishes = new ArrayList<>();
+    public final ArrayList<Fish> fishes = new ArrayList<>();
     
     public void feed() {
 

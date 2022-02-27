@@ -1,45 +1,23 @@
 package fishtank;
 
 public abstract class Fish {
-    protected String name;
+    
+    protected final FishPropertyGenerator generator = new FishPropertyGenerator();
+
+    protected String name = generator.getRandomName();
+//    protected int weight = generator.getRandomWeight();
     protected int weight = 1;
-    protected String color = "white";
+    protected String color = generator.getRandomColor();
     protected Boolean memoryLoss = false;
     
+    public abstract void feed();
+    
     public void status() {
-        String result = "name: " + this.name + ", type: " + this.getClass().getSimpleName() + ", weight: " + this.weight + ", color: " + this.color + ", short-term memory loss: " + this.memoryLoss;
-        System.out.println(result);
-    }
-    
-    public String getName() {
-        return this.name;
-    }
-    
-    public void setName(String newName) {
-        this.name = newName;
+        String status = "name: " + this.name + ", type: " + this.getClass().getSimpleName() + ", weight: " + this.weight + ", color: " + this.color;
+        System.out.println(status);
     }
     
     public int getWeight() {
         return this.weight;
-    }
-    
-    public void setWeight(int newWeight) {
-        this.weight = newWeight;
-    }
-    
-    public String getColor() {
-        return this.color;
-    }
-    
-    public void setColor(String newColor) {
-        this.color = newColor;
-    }
-    
-    public Boolean getMemoryLoss() {
-        return this.memoryLoss;
-    }
-    
-    public void setMemoryLoss(Boolean newMemState) {
-        this.memoryLoss = newMemState;
     }
 }

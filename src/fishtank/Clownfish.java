@@ -1,23 +1,11 @@
 package fishtank;
 
-import java.util.Random;
-
-public class Clownfish extends Fish implements Feed {
+public class Clownfish extends Fish {
     
-    public Clownfish() {}
-    public Clownfish(String name) {
-        this.name = name;
-    }
-    
-    private static String[] colors = {"white", "black", "gray", "green", "blue", "red", "yellow", "pink", "magenta", "dark green", "dark blue"};
-    
-    private final Random myRandom = new Random();
-    
-    private final int randomValue = myRandom.nextInt(11);
-
     @Override
     public void feed() {
+        System.out.println("fishtank.Clownfish.feed()");
         this.weight += 1;
-        this.color += (", " + colors[randomValue]);
+        this.color += (", " + this.generator.getRandomColor());
     }
 }

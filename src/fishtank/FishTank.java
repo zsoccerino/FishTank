@@ -4,12 +4,23 @@ public class FishTank {
     
     public static void main(String[] args) {
         
+        FishGenerator generator = new FishGenerator();
         Aquarium myAquarium = new Aquarium();
         
-        myAquarium.addFish("Clownfish", "Nemo");
-        myAquarium.addFish("Kong", "Dory");
-        myAquarium.addFish("Tang", "Béla");
-        System.out.println(myAquarium.fishes);
-        myAquarium.status();
+//        Clownfish clownFish = new Clownfish();
+//        Kong kong = new Kong();
+//        Tang tang = new Tang();
+//        
+//        
+//        myAquarium.addFish(clownFish);
+//        myAquarium.addFish(kong);
+//        myAquarium.addFish(tang);
+
+        myAquarium.addFish(generator.getRandomFish());
+        myAquarium.addFish(generator.getRandomFish());
+
+        myAquarium.getStatus();
+        myAquarium.feed();
+        myAquarium.getStatus();
     }
 }
