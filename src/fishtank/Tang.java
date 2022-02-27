@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Tang extends Fish {
     
-    private Boolean memoryLoss;
+    private boolean memoryLoss;
     private final Random memoryState = new Random();
 
     @Override
