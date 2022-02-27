@@ -31,12 +31,10 @@ public class Aquarium {
         });
     }
         
-    public void getStatus() {
+        public void getStatus() {
         
-        Iterator<Fish> it = fishes.iterator();
-        
-        while(it.hasNext()) {
-            it.next().status();
-        }
+        fishes.forEach(fish -> {
+            fish.status();
+        });
     }
 }

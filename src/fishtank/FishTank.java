@@ -8,9 +8,9 @@ public class FishTank {
 
         for (int i = 0; i < 5; i++) {
             myAquarium.addFish();
+            myAquarium.getStatus();
             myAquarium.feed();
             myAquarium.removeFish();
-            myAquarium.getStatus();
             System.out.println("...");
         }
     }
