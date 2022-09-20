@@ -1,1 +1,1 @@
-This was my entry exam to Green Fox Academy.
+OOP part of the entry exam to a bootcamp.
